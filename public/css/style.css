@@ -1,8 +1,44 @@
-#banner {
-    width: 25%;
+/* NavBar CSS */
 
+#banner {
+    background: linear-gradient(0.25turn ,#4307eb, white, #f10707); 
 }
 
+#banner-logo {
+    width: 10%;
+}
 #logo {
     width: 20%;
+}
+
+.navbar {
+    background: linear-gradient(to right ,#4307eb, #f10707); 
+    
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-size: 16px; 
+}
+
+.nav-link{
+    color: white !important;
+    font-size: 16px;
+}
+
+.navbar-toggler.btn-outline{
+    border-color: white;
+}
+
+/* Footer CSS */
+
+footer {
+    background: linear-gradient(to right, #4307eb, #f10707); 
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+span{
+    color: white;
+    
 }
