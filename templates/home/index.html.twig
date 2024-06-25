@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
@@ -18,19 +19,7 @@
 		{% endblock %}
 	</head>
 	<body>
-		<div class="card text-bg-dark rounded-0">
-			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsmWldT7_OE2kDhbehYcuTNHzItGFbeH5igw&s" class="img-fluid h-auto w-auto" alt="Banner"/>
-			<div class="card-img-overlay d-none d-lg-block">
-				<h5 class="card-title text-center fs-1 fw-bolder" id="Coffee Lover">Welcome in a new universe</h5>
-			</div>
 
-			{# {% include "fragments/_search_mobile.html.twig" %} #}
-
-			<div class="card-img-overlay d-none d-lg-block">
-				<h5 class="card-title text-center fs-1 fw-bolder">Welcome in a new universe</h5>
-			</div>
-
-		</div>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top ">
 			<div class="container-fluid">
 				<button class="navbar-toggler btn-outline" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,7 +57,7 @@
 							</div>
 						</div>
 						<li class="nav-item d-none d-lg-block">
-							<a href="{{ path('app_home') }}"><img src="{{ asset('logo.png') }}" alt="logo" title="accueil" id="logo"/></a>
+							<a href="{{ path('app_home') }}"><img src="{{ asset('logo.png') }}" alt="logo" title="Retour à l'accueil" id="logo"/></a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#">France</a>
@@ -123,35 +112,138 @@
 				</div>
 
 			</nav>
+
+		<div class="card text-bg-white rounded-0 ">
+			<img src="https://logowik.com/content/uploads/images/376_uefa_logo.jpg" class="img-fluid mx-auto d-block mt-4 pt-4" id="banner" alt="Banner"/>
+			<div class="card-img-overlay d-none d-lg-block">
+				<h5 class="card-title text-center fs-1 fw-bolder" id="Coffee Lover">Welcome in a new universe !!!</h5>
+			</div>
+
+			{# {% include "fragments/_search_mobile.html.twig" %} #}
+
+			<div class="card-img-overlay d-none d-lg-block">
+				<h5 class="card-title text-center text-dark fs-1 fw-bolder">Welcome in a new universe !!!</h5>
+			</div>
+
+		</div>
+		
 			{# {% include 'fragments/_flash_message.html.twig' %} #}
 			{# add div container for search : #}
 			<div id="search-results"></div>
 		</div>
-		{% block body %}{% endblock %}
+		{% block body %}
+		
+		<section class="features-section m-4" >
+		<div class="container overflow-hidden" >
+			<div class="row g-4">
+              <h1 class="text-center fw-bolder text-dark p-5 mb-4">Nos 6 grands championnats</h1>
+				
+				<div class="col-12">
+					<div class="row article-card mb-4">
+						
+						<div class="col-xs-12 col-md-6 mb-4">
+							<div>
+								<h2 class="h3 mb-3"><a class="link-dark text-decoration-none" href="#">France</a></h2>
+									<p class="mb-3">Titatadada</p>
+									<p class="text-secondary mb-1">Créé le :01/01/2020</p>
+									<p class="text-secondary mb-1">Mis à jour le : 01/01/2020</p>
+									<div class="section-btn m-4">
+										<a class="btn btn-rounded btn-quiz" data-mdb-ripple-color="white" data-mdb-ripple-init="" href="#">Lire la suite</a>
+									</div>
+							</div>
+						</div>
+
+						<div class="col-xs-12 col-md-6 mb-4">
+							<div>
+								<h2 class="h3 mb-3"><a class="link-dark text-decoration-none" href="#">Espagne</a></h2>
+									<p class="mb-3">Titatadada</p>
+									<p class="text-secondary mb-1">Créé le :01/01/2020</p>
+									<p class="text-secondary mb-1">Mis à jour le : 01/01/2020</p>
+									<div class="section-btn mt-3">
+										<a class="btn btn-rounded btn-quiz" data-mdb-ripple-color="white" data-mdb-ripple-init="" href="#">Lire la suite</a>
+									</div>
+							</div>
+						</div>
+
+						<div class="col-xs-12 col-md-6 mb-4">
+							<div>
+								<h2 class="h3 mb-3"><a class="link-dark text-decoration-none" href="#">Angleterre</a></h2>
+									<p class="mb-3">Titatadada</p>
+									<p class="text-secondary mb-1">Créé le :01/01/2020</p>
+									<p class="text-secondary mb-1">Mis à jour le : 01/01/2020</p>
+									<div class="section-btn mt-3">
+										<a class="btn btn-rounded btn-quiz" data-mdb-ripple-color="white" data-mdb-ripple-init="" href="#">Lire la suite</a>
+									</div>
+							</div>
+						</div>
+
+						<div class="col-xs-12 col-md-6 mb-4">
+							<div>
+								<h2 class="h3 mb-3"><a class="link-dark text-decoration-none" href="#">Allemagne</a></h2>
+									<p class="mb-3">Titatadada</p>
+									<p class="text-secondary mb-1">Créé le :01/01/2020</p>
+									<p class="text-secondary mb-1">Mis à jour le : 01/01/2020</p>
+									<div class="section-btn mt-3">
+										<a class="btn btn-rounded btn-quiz" data-mdb-ripple-color="white" data-mdb-ripple-init="" href="#">Lire la suite</a>
+									</div>
+							</div>
+						</div>
+
+						<div class="col-xs-12 col-md-6 mb-4">
+							<div>
+								<h2 class="h3 mb-3"><a class="link-dark text-decoration-none" href="#">Italie</a></h2>
+									<p class="mb-3">Titatadada</p>
+									<p class="text-secondary mb-1">Créé le :01/01/2020</p>
+									<p class="text-secondary mb-1">Mis à jour le : 01/01/2020</p>
+									<div class="section-btn mt-3">
+										<a class="btn btn-rounded btn-quiz" data-mdb-ripple-color="white" data-mdb-ripple-init="" href="#">Lire la suite</a>
+									</div>
+							</div>
+						</div>
+
+						<div class="col-xs-12 col-md-6 mb-4">
+							<div>
+								<h2 class="h3 mb-3"><a class="link-dark text-decoration-none" href="#">Portugal</a></h2>
+									<p class="mb-3">Titatadada</p>
+									<p class="text-secondary mb-1">Créé le :01/01/2020</p>
+									<p class="text-secondary mb-1">Mis à jour le : 01/01/2020</p>
+									<div class="section-btn mt-3">
+										<a class="btn btn-rounded btn-quiz" data-mdb-ripple-color="white" data-mdb-ripple-init="" href="#">Lire la suite</a>
+									</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		</section>
+		
+		{% endblock %}
 
 		<footer class="footer container-fluid py-8 border-top text-center">
 			<span class="text-white">
 				<div class="container p-4 pb-4">
 					<section class="mb-4">
-						<a class="btn btn-outline-light btn-floating m-1" href="!" role="button">
+						<a class="btn btn-outline-dark btn-floating m-1" href="!" role="button">
 							<i class="bi bi-facebook"></i>
 						</a>
-						<a class="btn btn-outline-light btn-floating m-1" href="!" role="button">
+						<a class="btn btn-outline-dark btn-floating m-1" href="!" role="button">
 							<i class="bi bi-twitter-x"></i>
 						</a>
-						<a class="btn btn-outline-light btn-floating m-1" href="!" role="button">
+						<a class="btn btn-outline-dark btn-floating m-1" href="!" role="button">
 							<i class="bi bi-linkedin"></i>
 						</a>
-						<a class="btn btn-outline-light btn-floating m-1" href="!" role="button">
+						<a class="btn btn-outline-dark btn-floating m-1" href="!" role="button">
 							<i class="bi bi-share-fill"></i>
 						</a>
-						<a class="btn btn-outline-light btn-floating m-1" href="#" role="button">
+						<a class="btn btn-outline-dark btn-floating m-1" href="#" role="button">
 							<i class="bi bi-github"></i>
 						</a>
 					</section>
-					<a class="text-white" href="#">Mentions légales</a>
+					<a class="text-dark" href="#">Mentions légales</a>
 					|
-					<a class="text-white" href="#">Qui sommes-nous</a>
+					<a class="text-dark" href="#">Qui sommes-nous</a>
 				</div>
 			</span>
 		</footer>
