@@ -13,7 +13,6 @@
 
 .navbar {
     background: linear-gradient(to right ,#4307eb, #f10707); 
-    
 }
 
 .navbar-nav .nav-link {
@@ -40,5 +39,9 @@ footer {
 
 span{
     color: white;
-    
 }
+/* Body CSS */
+#flag {
+    width: 50%;
+}
+
