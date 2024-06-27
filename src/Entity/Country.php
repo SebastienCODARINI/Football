@@ -32,6 +32,12 @@ class Country
      */
     private $ranking;
 
+
+     /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $flag;
+
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
@@ -91,4 +97,24 @@ class Country
         return $this;
     }
 
+
+    /**
+     * Get the value of flag
+     */ 
+    public function getFlag()
+    {
+        return $this->flag;
+    }
+
+    /**
+     * Set the value of flag
+     *
+     * @return  self
+     */ 
+    public function setFlag($flag)
+    {
+        $this->flag = $flag;
+
+        return $this;
+    }
 }

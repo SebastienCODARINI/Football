@@ -1,14 +1,26 @@
+
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello CountryController!{% endblock %}
+		{% block body %}
+		
+		<section class="features-section " >
+		<div class="container overflow-hidden" >
+			
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="col-12">
+				
+					<h1 class="text-center fw-bolder text-dark p-5 mb-4">EURO 2024</h1>
+					
+						
+						
+							<div>
+								<a href="{{ path('app_euro_country') }}"><img src="{{ asset('euro_teams.jpeg') }}" class=" img-fluid mx-auto d-block  "id="euro" alt="euro" /></a>
+							</div>
+						
+						
+				
+				
+				
+				<div class="col-12">
 					<h1 class="text-center fw-bolder text-dark py-5 my-4">Championnats</h1>
 					<div class="row article-card mb-4">
 
@@ -25,5 +37,14 @@
 									</div>
 							</div>
 						</div>
-                        {% endfor %}
-{% endblock %}
+
+						{% endfor %}
+
+						
+			
+		</div>
+		</section>
+		
+		{% endblock %}
+
+		

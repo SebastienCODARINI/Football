@@ -29,6 +29,10 @@
     border-color: white;
 }
 
+h1 {
+    font-family: sans-serif;
+}
+
 /* Footer CSS */
 
 footer {
