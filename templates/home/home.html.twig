@@ -13,7 +13,7 @@
 						
 						
 							<div>
-								<a href="{{ path('app_euro_country') }}"><img src="{{ asset('euro_teams.jpeg') }}" class=" img-fluid mx-auto d-block  "id="euro" alt="euro" /></a>
+								<a href="{{ path('app_euro_country') }}"><img src="{{ asset('images/euro_teams.jpeg') }}" class=" img-fluid mx-auto d-block  "id="euro" alt="euro" /></a>
 							</div>
 						
 						
@@ -29,11 +29,11 @@
 						<div class="col-3 col-md-6 mx-auto">
 							<div class="text-center">
 								<img src="{{ country.flag }}" class="img-fluid mx-auto d-block my-4 pt-5 "id="flag" alt="flag" />
-								<h2 class="h3 mb-3"><a class="link-dark text-decoration-none" href="#">{{country.name}}</a></h2>
-									<p class="mb-3">{{country.surname}}</p>
-									
+								<h2 class="h3 fw-bold mb-3"><a class="link-dark text-decoration-none" href="#">{{country.name}}</a></h2>
+									<p class="mb-3 fw-bold">{{country.championship}} </p>
+									<p class="mb-3">{{country.picturelogo}}</p>
 									<div class="section-btn m-4">
-										<a class="btn btn-rounded btn-quiz" data-mdb-ripple-color="white" data-mdb-ripple-init="" href="#">En savoir plus ...</a>
+										<a class="btn btn-rounded btn-quiz" data-mdb-ripple-color="white" data-mdb-ripple-init="" href="#">Voir les équipes...</a>
 									</div>
 							</div>
 						</div>

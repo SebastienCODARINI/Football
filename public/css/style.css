@@ -5,8 +5,10 @@
 }
 
 #banner-logo {
-    width: 10%;
+    width: 200px;
+    height: auto;
 }
+
 #logo {
     width: 20%;
 }
@@ -45,7 +47,12 @@ span{
     color: white;
 }
 /* Body CSS */
+
 #flag {
     width: 50%;
 }
+
+/* .features-section {
+    background: linear-gradient(to right, #143cda, #4307eb);
+} */
 

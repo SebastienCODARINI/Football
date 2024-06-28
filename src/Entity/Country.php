@@ -23,15 +23,9 @@ class Country
     private $name;
 
     /**
-     *  @ORM\Column(type="string", length=255, nullable=true)
+     *  @ORM\Column(type="string", length=255)
      */
-     private $surname;
-
-    /**
-     * @ORM\Column(type="bigint")
-     */
-    private $ranking;
-
+     private $championship;
 
      /**
      * @ORM\Column(type="string", length=255)
@@ -39,9 +33,10 @@ class Country
     private $flag;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="text")
      */
-    private $palmares;
+    private $picturelogo;
+
 
     public function getId(): ?int
     {
@@ -60,61 +55,41 @@ class Country
         return $this;
     }
 
-    public function getSurname(): ?string
+    public function getChampionship(): ?string
     {
-        return $this->surname;
+        return $this->championship;
     }
  
       
-      public function setSurname(string $surname): self
+      public function setChampionship(string $championship): self
       {
-           $this->surname = $surname;
+           $this->championship = $championship;
  
            return $this;
       }
 
-    public function getRating(): ?int
-    {
-        return $this->ranking;
-    }
 
-    public function setRating(int $ranking): self
-    {
-        $this->ranking = $ranking;
+        public function getFlag(): ?string
+        {
+            return $this->flag;
+        }
 
-        return $this;
-    }
+        public function setFlag(int $flag): self
+        {
+            $this->flag = $flag;
 
-    public function getPalmares(): ?string
-    {
-        return $this->palmares;
-    }
+            return $this;
+        }
 
-    public function setPalmares(?string $palmares): self
-    {
-        $this->palmares = $palmares;
+        public function getPicturelogo(): ?string
+        {
+            return $this->picturelogo;
+        }
 
-        return $this;
-    }
+        public function setPicturelogo(string $picturelogo): self
+        {
+            $this->picturelogo = $picturelogo;
 
-
-    /**
-     * Get the value of flag
-     */ 
-    public function getFlag()
-    {
-        return $this->flag;
-    }
-
-    /**
-     * Set the value of flag
-     *
-     * @return  self
-     */ 
-    public function setFlag($flag)
-    {
-        $this->flag = $flag;
-
-        return $this;
-    }
+            return $this;
+        }
 }

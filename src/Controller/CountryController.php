@@ -16,7 +16,7 @@ class CountryController extends AbstractController
     {
         $countries = $countryRepository->findAll();
         
-        return $this->render('country/index.html.twig', [
+        return $this->render('country/list.html.twig', [
             'controller_name' => 'CountryController',
             'countries' => $countries
         ]);
