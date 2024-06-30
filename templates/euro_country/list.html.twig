@@ -8,13 +8,13 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="col-12">
+<div class="col-10 mx-auto">
 					<h1 class="text-center fw-bolder text-dark py-5 my-4">Les pays qualifiés pour l'EURO 2024</h1>
 					<div class="row article-card mb-4">
 
 
 						{% for eurocountry in eurocountries %}
-						<div class="col-3 col-md-6 mx-auto">
+						<div class="col-3 col-md-2 mx-auto">
 							<div class="text-center">
 								<img src="{{ eurocountry.flag }}" class="img-fluid mx-auto d-block my-4 pt-5 "id="flag" alt="flag" />
 								<h2 class="h3 mb-3"><a class="link-dark text-decoration-none" href="#">{{eurocountry.name}}</a></h2>
@@ -25,5 +25,6 @@
 									</div>
 							</div>
 						</div>
+					
                         {% endfor %}
 {% endblock %}

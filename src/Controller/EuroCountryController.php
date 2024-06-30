@@ -11,7 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class EuroCountryController extends AbstractController
 {
     /**
-     * @Route("/euro/countries", name="app_euro_country")
+     * @Route("/euro_countries", name="app_euro_country")
      */
     public function list(EuroCountryRepository $EuroCountryRepository, CountryRepository $CountryRepository): Response
     {
