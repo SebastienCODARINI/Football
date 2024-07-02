@@ -35,7 +35,7 @@ class Country
     /**
      * @ORM\Column(type="text")
      */
-    private $picturelogo;
+    private $championship_logo;
 
 
     public function getId(): ?int
@@ -81,14 +81,14 @@ class Country
             return $this;
         }
 
-        public function getPicturelogo(): ?string
+        public function getChampionship_logo(): ?string
         {
-            return $this->picturelogo;
+            return $this->championship_logo;
         }
 
-        public function setPicturelogo(string $picturelogo): self
+        public function setChampionship_logo(string $championship_logo): self
         {
-            $this->picturelogo = $picturelogo;
+            $this->championship_logo = $championship_logo;
 
             return $this;
         }

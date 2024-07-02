@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+  <div class="container text-center">
+    <div>
+      <h1 class="m-4 fw-bolder">Erreur 404 - Vous n'êtes pas qualifié pour cette compétition</h1>
+      <img src="{{ asset('images/logo.png') }}" class="d-block mx-auto mb-2" width="500px" height="500px" alt="Erreur 500" />
+      <p>Une erreur interne s'est produite.</p>
+    </div>
+    <div class="d-flex justify-content-center align-items-center">
+      <a href="{{ path('app_home') }}" class="section-btn btn btn-rounded fw-bolder align-text-bottom border border-5 rounded-pill m-4">Retour à l'accueil</a>
+    </div>
+  </div>
+{% endblock %}

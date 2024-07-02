@@ -48,24 +48,35 @@
 						</ul>
 					</div>
 				</div>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
+				<div class="collapse navbar-collapse my-auto" id="navbarSupportedContent">
+					<ul class="navbar-nav text-start mb-lg-0 fw-bold">
 						<div class="d-flex d-lg-none">
-							<div class="me-3">
+							<div class="ms-4">
 								<a class="nav-link" href="{{ path('app_home') }}">Accueil</a>
 							</div>
 						</div>
-						<li class="nav-item d-none d-lg-block">
-							<a href="{{ path('app_home') }}"><img src="{{ asset('images/logo.png') }}" alt="logo" title="Retour à l'accueil" id="logo"/></a>
-						</li>
-
-						{% for country in countries %}
-
+						<li class="nav-item d-none  d-lg-block">
+							<a href="{{ path('app_home') }}"><img src="{{ asset('images/UEFA_Logo.png') }}" alt="logo" title="Retour à l'accueil" id="logo"/></a>
+							<a href="{{ path('app_euro_countries') }}"><img src="{{ asset('images/euro_2024.png') }}" alt="logo_euro" title="En route pour l'Euro 2024" id="logo_euro"/></a>
+						</li>									
 						<li class="nav-item">
-							<a class="nav-link" href="#">{{country.name}}</a>
+							<a class="nav-link" href="#">France</a>
 						</li>
-
-						{% endfor %}
+						<li class="nav-item">
+							<a class="nav-link" href="#">Espagne</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Angleterre</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Allemagne</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Italie</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Portugal</a>
+						</li>
 
 						
 						{# {% if app.user %}
@@ -107,10 +118,10 @@
 		<div class="card text rounded-0" id="banner" alt="Banner">
 			
 			<div class="card-text d-block">
-				<h5 class="card-title text-center text-dark py-4 fs-1 fw-bolder">Welcome in a new universe</h5>
+				<h5 class="card-title text-center text-dark py-2 fs-1 fw-bolder">Welcome in a new universe</h5>
 			</div>
 
-			<img src="{{ asset('images/UEFA_Logo.png') }}" class="img-fluid mx-auto d-block mb-4 "id="banner-logo" alt="Banner-logo" />
+			<img src="{{ asset('images/FIFA.png') }}" class="img-fluid mx-auto d-block mb-4 "id="banner-logo" alt="Banner-logo" />
 
 			{# {% include "fragments/_search_mobile.html.twig" %} #}
 
@@ -127,10 +138,10 @@
 		</div>
 </div>
 
-		<footer class="footer container-fluid py-8 border-top text-center">
+		<footer class="footer container-fluid p-8 border-top text-center">
 			<span class="text-white">
 				<div class="container p-4 pb-4">
-					<section class="mb-4">
+					<section class="m-4">
 						<a class="btn btn-outline-light btn-floating m-1" href="!" role="button">
 							<i class="bi bi-facebook"></i>
 						</a>
