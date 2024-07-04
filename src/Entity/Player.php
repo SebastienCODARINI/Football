@@ -43,9 +43,10 @@ class Player
     private $number;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\ManyToOne(targetEntity=Club::class, inversedBy="players")
      */
     private $club;
+
 
     public function getId(): ?int
     {
