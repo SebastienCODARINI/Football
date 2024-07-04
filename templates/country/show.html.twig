@@ -13,32 +13,40 @@
 	
 
         <div class="row m-4">
-            <div class="col-12 text-center">
+            
+                    <div class="col-12 text-center">
 
-                <div class="row g-0 border rounded overflow-hidden flex-md-row align-items-start mb-4 shadow-sm position-relative">
-                    
+              
 
-                    <div class="col-2 p-4 bg-light">
 							
 					</div>
 
-						<table class="table">
-							<thead>
+						
+							<div class="row g-0">
+								<div class="col-md-4 text-center">
+								<img src="{{country.championship_logo}}" class="img-fluid mt-2 rounded-start" id="championship_logo">
+								</div>
+								<div class="col-md-4 text-center p-4">
+									<h2 class="text-align-center fw-bolder">Tous les clubs de {{ country.championship }} :</h2>	
+								</div>
+								<div class="col-md-4 text-center">								
+									<img src="{{country.flag}}" width="50" height="50" class="d-inline-block mb-2 align-text-top">
+									<h5 class="card-title">{{ country.championship }}</h5>								
+								</div>
 								
+							</div>
+						
+
+						<table class="table align-items-center">
+							<thead>
+								<tr>
 									<div class="container-fluid">
 										<a class="navbar-brand" href="#"></a>
-										<img src="{{country.flag}}" alt="Logo" width="50" height="50" class="d-inline-block mb-2 align-text-top">
-										<h3 class="mb-1 fw-bolder">{{ country.championship }}</h3>										
 										
-										<img src="{{country.championship_logo}}"class="img-fluid">
-
+										<h3 class="mb-1 fw-bolder"></h3>										
+										<img src=""class="img-fluid">
 									</div>
-									
-								<tr>
-								<th scope="col"></th>
-								<th scope="col"></strong></th>
-								<th scope="col"></th>
-								<th scope="col"><div class="mb-1 text-muted"><img src=class="img-fluid"></div></th>
+								
 								</tr>								
 							</thead>
 							<thead>
