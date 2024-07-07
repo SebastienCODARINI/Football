@@ -37,16 +37,22 @@ class Country
     /**
      * @ORM\Column(type="text")
      */
-    private $championship_logo;
+    private $logo;
 
     /**
      * @ORM\OneToMany(targetEntity=Club::class, mappedBy="country")
      */
     private $clubs;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Player::class, mappedBy="country")
+     */
+    private $players;
+
     public function __construct()
     {
         $this->clubs = new ArrayCollection();
+        $this->players = new ArrayCollection();
     }
 
 
@@ -93,14 +99,14 @@ class Country
             return $this;
         }
 
-        public function getChampionship_logo(): ?string
+        public function getLogo(): ?string
         {
-            return $this->championship_logo;
+            return $this->logo;
         }
 
-        public function setChampionship_logo(string $championship_logo): self
+        public function setLogo(string $logo): self
         {
-            $this->championship_logo = $championship_logo;
+            $this->logo = $logo;
 
             return $this;
         }
@@ -129,6 +135,36 @@ class Country
                 // set the owning side to null (unless already changed)
                 if ($club->getCountry() === $this) {
                     $club->setCountry(null);
+                }
+            }
+
+            return $this;
+        }
+
+        /**
+         * @return Collection<int, Player>
+         */
+        public function getPlayers(): Collection
+        {
+            return $this->players;
+        }
+
+        public function addPlayer(Player $player): self
+        {
+            if (!$this->players->contains($player)) {
+                $this->players[] = $player;
+                $player->setCountry($this);
+            }
+
+            return $this;
+        }
+
+        public function removePlayer(Player $player): self
+        {
+            if ($this->players->removeElement($player)) {
+                // set the owning side to null (unless already changed)
+                if ($player->getCountry() === $this) {
+                    $player->setCountry(null);
                 }
             }
 

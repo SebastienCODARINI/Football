@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\EuroCountryRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -41,6 +43,16 @@ class EuroCountry
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $palmares;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Player::class, mappedBy="euro_country")
+     */
+    private $Players;
+
+    public function __construct()
+    {
+        $this->Players = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -103,6 +115,36 @@ class EuroCountry
     public function setPalmares(?string $palmares): self
     {
         $this->palmares = $palmares;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Player>
+     */
+    public function getPlayers(): Collection
+    {
+        return $this->Players;
+    }
+
+    public function addPlayer(Player $player): self
+    {
+        if (!$this->Players->contains($player)) {
+            $this->Players[] = $player;
+            $player->setEuroCountry($this);
+        }
+
+        return $this;
+    }
+
+    public function removePlayer(Player $player): self
+    {
+        if ($this->Players->removeElement($player)) {
+            // set the owning side to null (unless already changed)
+            if ($player->getEuroCountry() === $this) {
+                $player->setEuroCountry(null);
+            }
+        }
 
         return $this;
     }

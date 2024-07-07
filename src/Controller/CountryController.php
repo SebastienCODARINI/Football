@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\ClubRepository;
 use App\Repository\CountryRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -25,10 +26,11 @@ class CountryController extends AbstractController
     /**
      * @Route("/country/{id}", name="app_country_show")
      */
-    public function show($id, CountryRepository $countryRepository): Response
+    public function show($id, CountryRepository $countryRepository, ClubRepository $clubRepository): Response
     {
         $country = $countryRepository->find($id);
         $countries = $countryRepository->findAll();
+        $clubs = $clubRepository->findAll();
 
         if ($country === null) {
             return $this->render('errors/404.html.twig');
@@ -37,7 +39,8 @@ class CountryController extends AbstractController
         return $this->render('country/show.html.twig', [
             'controller_name' => 'CountryController',
             'countries' => $countries,
-            'country' => $country
+            'country' => $country,
+            'clubs' => $clubs
         ]);
     }
 }

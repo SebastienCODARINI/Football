@@ -24,7 +24,7 @@
 						
 							<div class="row g-0">
 								<div class="col-md-4 text-center">
-								<img src="{{country.championship_logo}}" class="img-fluid mt-2 rounded-start" id="championship_logo">
+								<img src="{{country.logo}}" class="img-fluid mt-2 rounded-start" id="championship_logo">
 								</div>
 								<div class="col-md-4 text-center p-4">
 									<h2 class="text-align-center fw-bolder">Tous les clubs de {{ country.championship }} :</h2>	
@@ -44,6 +44,7 @@
 								
 								</tr>								
 							</thead>
+							
 							<thead>
 								<tr>
 								<th scope="col">#</th>
@@ -52,28 +53,20 @@
 								<th scope="col">surname</th>
 								</tr>
 							</thead>
-							<tbody>
+							<tbody>						
 
-							
+							{% for club in clubs %}
 
 								<tr>
-								<th class="py-4" scope="row">1</th>
-								<td class="p-4">SCO Angers</td>
-								<td><img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Angers_SCO_logo.png" width="50" height="50" class="d-inline-block mb-2 align-text-top"</td>
-								<td class="p-4">Le SCO d'Angers</td>
+								<th class="py-4" scope="row">{{club.id}}</th>
+								<td class="p-4">{{club.name}}</td>
+								<td><img src="{{club.logo}}" width="auto" height="50" class="d-inline-block mb-2 align-text-top"</td>
+								<td class="p-4">{{club.surname}}</td>
 								</tr>
-								<tr>
-								<th class="py-4" scope="row">2</th>
-								<td class="p-4">AJ Auxerre</td>
-								<td><img src="https://upload.wikimedia.org/wikipedia/fr/thumb/f/fe/Logo_AJ_Auxerre.svg/1622px-Logo_AJ_Auxerre.svg.png" width="auto" height="50" class="d-inline-block mb-2 align-text-top"></td>
-								<td class="p-4">AJA</td>
-								</tr>
-								<tr>
-								<th class="py-4" scope="row">3</th>
-								<td class="p-4">Stade Brestois</td>
-								<td><img src="https://upload.wikimedia.org/wikipedia/fr/thumb/1/14/Logo_Stade_Brestois.svg/495px-Logo_Stade_Brestois.svg.png" width="auto" height="50" class="d-inline-block mb-2 align-text-top"></td>
-								<td class="p-4">SB</td>
-								</tr>
+
+							{% endfor %}
+
+								
 							</tbody>
 							</table>
 							</div>

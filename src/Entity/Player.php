@@ -38,14 +38,19 @@ class Player
     private $role;
 
     /**
-     * @ORM\Column(type="integer")
-     */
-    private $number;
-
-    /**
      * @ORM\ManyToOne(targetEntity=Club::class, inversedBy="players")
      */
     private $club;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Country::class, inversedBy="players")
+     */
+    private $country;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=EuroCountry::class, inversedBy="Players")
+     */
+    private $euro_country;
 
 
     public function getId(): ?int
@@ -101,18 +106,6 @@ class Player
         return $this;
     }
 
-    public function getNumber(): ?int
-    {
-        return $this->number;
-    }
-
-    public function setNumber(int $number): self
-    {
-        $this->number = $number;
-
-        return $this;
-    }
-
     public function getClub(): ?string
     {
         return $this->club;
@@ -121,6 +114,30 @@ class Player
     public function setClub(string $club): self
     {
         $this->club = $club;
+
+        return $this;
+    }
+
+    public function getCountry(): ?Country
+    {
+        return $this->country;
+    }
+
+    public function setCountry(?Country $country): self
+    {
+        $this->country = $country;
+
+        return $this;
+    }
+
+    public function getEuroCountry(): ?EuroCountry
+    {
+        return $this->euro_country;
+    }
+
+    public function setEuroCountry(?EuroCountry $euro_country): self
+    {
+        $this->euro_country = $euro_country;
 
         return $this;
     }

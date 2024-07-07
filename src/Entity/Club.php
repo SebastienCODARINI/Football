@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Entity\Player;
+use App\Entity\Country;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\ClubRepository;
 use Doctrine\Common\Collections\Collection;
@@ -31,7 +32,7 @@ class Club
     private $logo;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="text", length=1500, nullable=true)
      */
     private $palmares;
 
