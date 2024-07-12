@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Votre Championnat de {{country.championship}} {% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="col-10 -auto mx-auto">
+
+	
+
+        <div class="row m-4">
+            
+                    
+
+              
+
+							
+					</div>
+
+						
+							<div class="row g-0">
+								<div class="col-md-4 text-center">
+								<img src="{{country.logo}}" class="img-fluid mt-2 rounded-start" id="championship_logo">
+								</div>
+								<div class="col-md-4 text-center p-4">
+									<h2 class="text-align-center fw-bolder">Tous les clubs de {{ country.championship }} :</h2>	
+								</div>
+								<div class="col-md-4 text-center">								
+									<img src="{{country.flag}}" width="50" height="50" class="d-inline-block mb-2 align-text-top">
+									<h5 class="card-title">{{ country.championship }}</h5>								
+								</div>
+								
+							</div>
+						
+						<div class="col-8 mx-auto">
+						<table class="table align-items-center my-4">
+							<thead>
+								<tr>
+									
+								
+								</tr>								
+							</thead>
+							
+							<thead>
+								<tr>
+								<th scope="col">#</th>
+								<th scope="col">Name</th>
+								<th scope="col">Logo</th>
+								<th scope="col">surname</th>
+								</tr>
+							</thead>
+							<tbody>						
+
+							{% for club in clubs %}
+
+								<tr>
+								<th class="py-4" scope="row">{{club.id}}</th>
+								<td class="p-4">{{club.name}}</td>
+								<td ><img src="{{club.logo}}"class="img-center" width="auto" height="50" class=" mb-2 align-text-top"</td>
+								<td class="p-4">{{club.surname}}</td>
+								</tr>
+
+							{% endfor %}
+
+								
+							</tbody>
+							</table>
+							</div>
+                        
+			</div>
+   
+</div>
+{% endblock %}

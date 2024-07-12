@@ -22,20 +22,20 @@
 				
 				<div class="col-12">
 					<h1 class="text-center fw-bolder text-dark py-5 my-4">Championnats</h1>
-					<div class="row article-card mb-4">
-
+					<div class="row article-card mb-4" >
 
 						{% for country in countries %}
-						<div class="col-3 col-md-4 mx-auto" href="{{ path('app_country_show', { id: country.id}) }}">
-							<div class="text-center py-auto">
+						
+						<div class="col-3 col-md-4 mx-auto" >
+							<a href="{{ path('app_club', {id: country.id}) }}"><div class="text-center py-auto" >
 								<img src="{{ country.flag }}" class="img-fluid mx-auto d-block my-4 pt-5 "id="flag" alt="flag" />
 								<h2 class="h3 fw-bold mb-3"><a class="link-dark text-decoration-none">{{country.name}}</a></h2>
 									<p class="mb-3 fw-bold">{{country.championship}} </p>
 									<img src="{{country.logo}}"class="col-1 col-md-6 mx-auto" id="championship_logo">
 									<div class="section-btn align-text-bottom border border-5 rounded-pill m-4">
-										<a class="btn btn-rounded fw-bold " href="{{ path('app_country_show', { id: country.id}) }}" title="Toutes les equipes de {{country.championship}} ">Voir les équipes de {{country.championship}}...</a>
+										<a class="btn btn-rounded fw-bold " href="{{ path('app_club', {id: country.id}) }}" title="Toutes les equipes de {{country.championship}} ">Voir les équipes de {{country.championship}}...</a>
 									</div>
-							</div>
+							</a></div>
 						</div>
 
 						{% endfor %}
